@@ -7,6 +7,10 @@ Slides: https://docs.google.com/presentation/d/17Mi3NFS5hEQjuwk4hRp7skK-efOqhRNi
 Libvirt Provider: https://github.com/dmacvicar  
 Terraform Docs: https://www.terraform.io/docs/index.html
 
+# Setup Environment Guide
+
+Follow this guide: [Installation Guide](install-terraform.txt)
+
 # Demo
 
 You can try the demo on your environment
