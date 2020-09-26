@@ -1,10 +1,10 @@
 # Reuni Virtual NOLSATU dan Peresmian ADINUSA
 
+Slides: https://docs.google.com/presentation/d/17Mi3NFS5hEQjuwk4hRp7skK-efOqhRNiaqPrlR5RtsY/edit?usp=sharing
+
 # Use-cases
 * Provides VM(s) for Digitalent (OA) OpenStack Administration. 100 VM (Batch #1) & 200 VM (Batch #2)
 * Personally I'm using it for Lab Environment
-
-Slides: https://docs.google.com/presentation/d/17Mi3NFS5hEQjuwk4hRp7skK-efOqhRNiaqPrlR5RtsY/edit?usp=sharing
 
 # References
 
