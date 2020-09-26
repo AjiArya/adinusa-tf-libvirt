@@ -1,0 +1,39 @@
+Q: What is this?
+A: Guide to install terraform and libvirt provider
+
+##########################
+### - Pre-requisites - ###
+##########################
+
+OS: CentOS 8
+
+#1. Install tools
+sudo dnf install -y wget mkisofs git make
+
+#2. Groupinstall "Virtualization Host"
+sudo dnf groupinstall -y "Virtualization Host"
+
+#3. Download and install terraform
+cd /tmp
+wget https://releases.hashicorp.com/terraform/0.13.3/terraform_0.13.3_linux_amd64.zip
+unzip terraform_0.13.3_linux_amd64.zip
+sudo mv terraform /usr/local/bin
+
+#4. Install go
+sudo dnf module install -y go-toolset
+
+#5. Install libvirt-devel
+sudo dnf install -t libvirt-devel
+
+#6. Build the provider
+sudo -i
+mkdir go
+export GOPATH=/root/go
+mkdir -p $GOPATH/src/github.com/dmacvicar; cd $GOPATH/src/github.com/dmacvicar
+git clone https://github.com/dmacvicar/terraform-provider-libvirt.git
+cd $GOPATH/src/github.com/dmacvicar/terraform-provider-libvirt
+make install
+
+#7. Move the provider binary
+mkdir -p ~/.local/share/terraform/plugins/registry.terraform.io/dmacvicar/libvirt/0.6.2/linux_amd64
+mv $GOPATH/bin/terraform-provider-libvirt ~/.local/share/terraform/plugins/registry.terraform.io/dmacvicar/libvirt/0.6.2/linux_amd64
